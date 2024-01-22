@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'core'
+    'core',
+    'core.user'
 ]
 
 MIDDLEWARE = [
@@ -78,10 +79,10 @@ DATABASES = {
 'default': {
     'ENGINE': 'django.db.backends.postgresql_psycopg2',
     'NAME': 'postgres',
-    'USER': 'postgres',
-    'PASSWORD': 'WJloSbhSGj7Ok1ii',
-    'HOST': 'db.rzblryykuvzioacrnnfe.supabase.co',
-    'PORT': '5432',
+    'USER': 'postgres.jtgndwqwyiciouxvsmix',
+    'PASSWORD': '+4f%JKak?pCqAt7',
+    'HOST': 'aws-0-ap-southeast-1.pooler.supabase.com',
+    'PORT': '6543',
 }
 }
 
@@ -126,3 +127,4 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+AUTH_USER_MODEL = 'core_user.User'

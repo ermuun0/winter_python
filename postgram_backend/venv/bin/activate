@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/tornado-13/Desktop/tornado winter/winter_python/venv"
+VIRTUAL_ENV="/Users/tornado-13/Desktop/tornado winter/winter_python/postgram_backend/venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
