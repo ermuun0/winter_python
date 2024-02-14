@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% block title %}Log IN {% endblock title %}
+
+{%block content%}
+<h2>
+    Log In
+</h2>
+<form action="" method="post" class="flex flex-col m-2">
+    {% csrf_token%}
+    {% render_field form.username class="bg-gray-50 m-2" %}
+    {% render_field form.password class="bg-gray-50 m-2"%}
+    <!-- {{ form.as_p}} -->
+    <button type="submit">Log in</button>
+</form>
+<p><a href="{% url 'password_reset %}">Forgot your password?</a></p>
+{% endblock content %}
