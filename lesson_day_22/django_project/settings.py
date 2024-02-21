@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'pages',
     'django_browser_reload',
     'widget_tweaks',
+    'articles.apps.ArticlesConfig',
 ]
 
 MIDDLEWARE = [
