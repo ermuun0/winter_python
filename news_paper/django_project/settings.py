@@ -38,11 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
      "accounts.apps.AccountsConfig",
-    # 'tailwind',
-    # 'theme',
-    # 'pages',
-    # 'django_browser_reload',
-    # 'widget_tweaks',
+    'tailwind',
+    'theme',
+    'pages',
+    'django_browser_reload',
+    'widget_tweaks',
     'articles.apps.ArticlesConfig',
 ]
 
