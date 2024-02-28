@@ -39,21 +39,21 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core',
     'core.user',
+        'corsheaders',
     'rest_framework',
     'rest_framework_simplejwt',
     'core.auth',
     'core.post',
     'core.comment',
-    'corsheaders',
+
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+        'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
-'django.middleware.common.CommonMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -80,7 +80,8 @@ CORS_ALLOWED_ORIGINS = [
 "http://localhost:3000",
 "http://127.0.0.1:3000"
 ]
-
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'uploads'
 WSGI_APPLICATION = 'CoreRoot.wsgi.application'
 
 
@@ -97,7 +98,7 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-
+DEFAULT_AVATAR_URL = "https://api.dicebear.com/7.x/pixel-art/svg"
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators

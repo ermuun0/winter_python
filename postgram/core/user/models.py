@@ -38,6 +38,7 @@ permissions."""
         return user 
 
 class User(AbstractBaseUser, PermissionsMixin, AbstractModel):
+    
     username = models.CharField(db_index=True,
         max_length=255, unique=True)
     first_name = models.CharField(max_length=255)
@@ -78,3 +79,9 @@ class User(AbstractBaseUser, PermissionsMixin, AbstractModel):
     def has_liked_comment(self, comment):
         """Return True if the user has liked a `comment`; else False"""
         return self.comments_liked.filter(pk=comment.pk).exists()
+    def user_directory_path(instance, filename):
+        return 'user_{0}/{1}'.format(instance.public_id, filename)
+    def user_directory_path(instance, filename):
+        return 'user_{0}/{1}'.format(instance.public_id, filename)
+    avatar = models.ImageField(null=True,
+        blank=True, upload_to=user_directory_path)
