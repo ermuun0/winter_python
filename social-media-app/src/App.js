@@ -12,11 +12,9 @@ function App() {
             <Home />
           </ProtectedRoute>
         }
-        
       />
       <Route path="/login/" element={<div>Login</div>} />
-      <Route path="/register/" element={<Registration />}
-      />
+      <Route path="/register/" element={<Registration />} />
       <Route path="/login/" element={<Login />} />
     </Routes>
   );

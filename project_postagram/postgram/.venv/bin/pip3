@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' "/Users/tornado-13/Desktop/tornado winter/winter_python/postgram/.venv/bin/python3" "$0" "$@"
+'''exec' "/Users/tornado-13/Desktop/tornado winter/winter_python/project_postagram/postgram/.venv/bin/python3" "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re

@@ -1,14 +1,13 @@
 import { useState } from "react";
 import { Form, Button } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
 import { useUserActions } from "../../hooks/user.actions";
 
 function LoginForm() {
-  const navigate = useNavigate();
   const [validated, setValidated] = useState(false);
   const [form, setForm] = useState({});
   const [error, setError] = useState(null);
   const userActions = useUserActions();
+
 
 
   const handleSubmit = (event) => {
@@ -77,4 +76,4 @@ function LoginForm() {
   );
 }
 export default LoginForm;
-const [error, setError] = useState(null);
+

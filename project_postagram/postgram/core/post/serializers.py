@@ -3,7 +3,7 @@ from rest_framework.exceptions import ValidationError
 from core.abstract.serializers import AbstractSerializer
 from core.post.models import Post
 from core.user.models import User
-from user.serializers import UserSerializer
+from core.user.serializers import UserSerializer
 
 class PostSerializer(AbstractSerializer):
     author = serializers.SlugRelatedField(queryset=User.objects.all(),

@@ -1,7 +1,7 @@
 from rest_framework.permissions import AllowAny
 from rest_framework import viewsets
-from user.serializers import UserSerializer
-from user.models import User
+from core.user.serializers import UserSerializer 
+from core.user.models import User
 from rest_framework.permissions import IsAuthenticated
 from core.abstract.viewsets import AbstractViewSet
 
