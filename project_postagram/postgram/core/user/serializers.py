@@ -10,9 +10,8 @@ class UserSerializer(AbstractSerializer):
     class Meta:
         model = User
         fields = ['id', 'username', 'first_name',
-            'last_name', 'bio', 'avatar', 'email',
-            'is_active', 'created', 'updated']
-        read_only_field = ['is_active']
+            'last_name', 'avatar', 'email', 'created', 'updated', 'posts_count']
+
     def to_representation(self, instance):
         representation = super().to_representation(instance)
         if not representation['avatar']:

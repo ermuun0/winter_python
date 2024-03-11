@@ -26,6 +26,8 @@ class UserManager(BaseUserManager, AbstractManager):
         )
         user.set_password(password)
         user.save(using=self._db)
+        
+        return user
 
     def create_superuser(self, username, email, password, **kwargs):
         """Create and return a `User` with superuser (admin)
@@ -50,7 +52,7 @@ class User(AbstractBaseUser, PermissionsMixin, AbstractModel):
     last_name = models.CharField(max_length=255)
     email = models.EmailField(db_index=True, unique=True)
     is_active = models.BooleanField(default=True)
-    is_staff = models.BooleanField(default=True)
+    is_staff = models.BooleanField(default=False)
     is_superuser = models.BooleanField(default=False)
     posts_liked = models.ManyToManyField("core_post.Post", related_name="liked_by")
 

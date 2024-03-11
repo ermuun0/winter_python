@@ -20,7 +20,6 @@ function RegistrationForm() {
       email: form.email,
       first_name: form.first_name,
       last_name: form.last_name,
-      bio: form.bio,
     };
     axios
       .post("http://localhost:8000/api/auth/register/", data)
@@ -116,16 +115,7 @@ function RegistrationForm() {
         <Form.Control.Feedback type="invalid">
           Please provide a valid password.
         </Form.Control.Feedback>
-      </Form.Group>
-      <Form.Group className="mb-3">
-        <Form.Label>Bio</Form.Label>
-        <Form.Control
-          value={form.bio}
-          onChange={(e) => setForm({ ...form, bio: e.target.value })}
-          as="textarea"
-          rows={3}
-          placeholder="A simple bio ... (Optional)"
-        />
+
       </Form.Group>
       <div className="text-content text-danger">{error && <p>{error}</p>}</div>
       <Button variant="primary" type="submit">
