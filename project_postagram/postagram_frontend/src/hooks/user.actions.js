@@ -13,13 +13,13 @@ function useUserActions() {
     return axios.post(`${baseURL}/auth/login/`, data).then((res) => {
       // Registering the account and tokens in the
       // store
-      setUserData(res);
+      setUserData(res.data);
       navigate("/");
     });
   }
   function register(data){
     return axios.post(`${baseURL}/auth/register/`, data).then((res) => {
-      setUserData(res);
+      setUserData(res.data);
       navigate("/")
     })
   }

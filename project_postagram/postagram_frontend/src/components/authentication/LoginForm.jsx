@@ -40,13 +40,13 @@ function LoginForm() {
       onSubmit={handleSubmit}
     >
       <Form.Group className="mb-3">
-        <Form.Label>Username</Form.Label>
+        <Form.Label>Email</Form.Label>
         <Form.Control
-          value={form.username}
-          onChange={(e) => setForm({ ...form, username: e.target.value })}
+          value={form.email}
+          onChange={(e) => setForm({ ...form, email: e.target.value })}
           required
-          type="text"
-          placeholder="Enter username"
+          type="email"
+          placeholder="Enter email"
         />
         <Form.Control.Feedback type="invalid">
           This file is required.
@@ -65,6 +65,7 @@ function LoginForm() {
         <Form.Control.Feedback type="invalid">
           Please provide a valid password.
         </Form.Control.Feedback>
+        
       </Form.Group>
       <div className="text-content text-danger">
         {error && <p>{error}</p>}
